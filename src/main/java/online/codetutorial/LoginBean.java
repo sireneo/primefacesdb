@@ -9,6 +9,7 @@ import javax.validation.constraints.Size;
 import online.codetutorial.dao.LoginDAO;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import online.codetutorial.util.SessionUtils;
 
 /**
@@ -61,7 +62,7 @@ public class LoginBean {
     }
 
     //validate login
-    public String validateUsernamePassword() throws IOException{
+    public String validateUsernamePassword() throws IOException, URISyntaxException{
         boolean valid = LoginDAO.validate(username, password);
 	if (valid) {
             HttpSession session = SessionUtils.getSession();
