@@ -1,4 +1,5 @@
 package online.codetutorial.dao;
+import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -7,7 +8,7 @@ import online.codetutorial.util.DataConnect;
 
 public class LoginDAO {
 
-    public static boolean validate(String user, String password) {
+    public static boolean validate(String user, String password) throws URISyntaxException {
         Connection con = null;
         PreparedStatement ps = null;
 
